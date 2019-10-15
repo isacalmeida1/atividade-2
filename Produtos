@@ -1,0 +1,18 @@
+package produto;
+
+public class Produtos extends CadastraProduto {
+	// herança
+	
+	public Produtos (String nome, String marca, String modelo , String codPeca,String descricao,int quantidade,String preco) {
+		super(nome,marca,modelo,codPeca,descricao,quantidade,preco);
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		
+		return "\nNome: " +this.getNome() + "\nMarca: "+this.getMarca() + "\nModelo: "+this.getModelo() + "\nCodPeca: "+ this.getCodPeca() +
+				"\nDescrição: "+ this.getCodPeca() + "\nQuantidade: "+this.getQuantidade() + "\nPreço: "+ this.getPreco();
+		
+	}}

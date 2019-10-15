@@ -1,0 +1,92 @@
+package produto;
+
+public class  CadastraProduto {
+	
+
+		//propriedades e atributos
+		private String nome;
+		private String marca;
+		private String modelo;
+		private String codPeca;
+		private String descricao;
+		private int quantidade;
+		private String preco;
+		
+		
+		CadastraProduto(Object nome, String marca, String modelo, String codPeca, String descricao, int quantidade, String preco){
+			
+		}
+
+		//metodos get e setts
+		
+		public void setNome(String nome) {
+		 this.nome = Validadores.eliminarEspaco(nome);
+		}
+		public String getNome() {
+			return nome;
+		}
+		public String getMarca() {
+		 return marca;
+		}
+		public void setMarca(String marca) {
+		 this.marca = marca;
+		}
+		public String getModelo() {
+		 return modelo;
+		}
+		public void setModelo(String modelo) {
+		 this.modelo = modelo;
+		}
+		public String getCodPeca() {
+		 return codPeca;
+		}
+
+		public void setCodPeca(String codPeca) {
+		 if(Validadores.validarPeca(codPeca)){
+		 this.codPeca = codPeca;
+		 }else{
+		  System.out.println("Codigo Invalido: ");
+		 }
+		}
+
+
+		public String getDescricao() {
+		 return descricao;
+		}
+
+
+		public void setDescricao(String descricao) {
+			 this.descricao = descricao;
+		
+		}
+
+
+		public int getQuantidade() {
+		 return quantidade;
+		}
+
+
+		public void setQuantidade(int quantidade) {
+		 this.quantidade = quantidade;
+		}
+
+
+		public String getPreco() {
+		 return preco;
+		}
+
+
+		public void setPreco(String preco) {
+			if(Validadores.preco(preco) != null) {
+			 this.preco = preco;
+			}else {
+				System.out.println("Valor Incorreto");
+			}
+				
+			}
+		}
+
+		
+	
+		
+
